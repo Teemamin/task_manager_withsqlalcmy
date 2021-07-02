@@ -18,6 +18,8 @@ else:
 
 # instance of SQLAlchemy pass the instance of flask
 db = SQLAlchemy(app)
+db.init_app(app)
+
 # need to have routes import after db and app to avoid circular import error
 from taskmanager import routes #nqa
 
